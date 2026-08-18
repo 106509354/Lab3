@@ -15,6 +15,7 @@
 
     <body>
         <fieldset> 
+        <a href="https://www.swin.edu.au"
         <img
              id ="Swinburne_logo" 
              src="logo.png" 
@@ -22,6 +23,7 @@
              title = "Swinburne University of Technology Logo"
              loading ="lazy" 
              width="158" height="78"
+            
          >
 
         <h1>CWA Help Desk Appointment</h1>
@@ -48,7 +50,7 @@
 		    	<label for="COS60007">COS60007</label> 
                 </p>
                 		<p><label for="Tutor">Your Tutor</label> 
-			<select name="Tutor" id="Tutor">
+			<select name="Tutor" id="Tutor" placeholder="Please Select">
 				<option value="Dennis D">Dennis D</option>			
 				<option value="Ronald P">Ronald P</option>
 				<option value="Fredrick L">Fredric L</option>
@@ -75,11 +77,22 @@
 			    <textarea id="Description" name="Description" rows="4" cols="40"></textarea>
 		        </p>
             </fieldset>
-
-
+            <fieldset>
+                <legend>Preferred Date / Time</legend>
+                <p><label for="Date">Date</label> 
+			    <input type="date" name= "Date" id="Date" placeholder="dd-mm-yyyy" maxlength="10" size="10"/>
+		        </p>
+                <p>
+                <label for="Time">Time</label> 
+			    <input type="Time" name= "Time" id="Time" placeholder="00:00" maxlength="5" size="10"/>
+                </p>
+            </fieldset>
             
+            <input type= "submit" value="Book"/>
+	        <input type= "reset" value="Reset Form"/>
         </fieldset>
     </body>
-
-
 </html>
+
+
+
