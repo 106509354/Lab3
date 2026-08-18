@@ -1,4 +1,4 @@
-<!doctype HTMl>
+<!DOCTYPE html>
 <html lang = "en" >
     <head>
         <title> CWA Help Desk Appointment </title>
@@ -15,16 +15,17 @@
 
     <body>
         <fieldset> 
-        <a href="https://www.swin.edu.au"
-        <img
-             id ="Swinburne_logo" 
-             src="logo.png" 
-             alt="Logo of institution" 
-             title = "Swinburne University of Technology Logo"
-             loading ="lazy" 
-             width="158" height="78"
-            
-         >
+            <form action="#" method="post">
+             <a href="https://www.swin.edu.au">
+             <img
+                 id ="Swinburne_logo" 
+                 src="logo.png" 
+                 alt="Logo of institution" 
+                title = "Swinburne University of Technology Logo"
+                 loading ="lazy" 
+                 width="158" height="78"
+                >
+            </a>
 
         <h1>CWA Help Desk Appointment</h1>
     
@@ -32,65 +33,80 @@
         <p> Check Blackboard for CWA tutors will be there.</p>
             <fieldset>
 		        <legend>Student details</legend>
-                <p><label for="Student ID">Student ID</label> 
-			    <input type="text" name= "StudentiD" id="StudentID" maxlength="30" size="10" required="required"/> </p>
+                <p>
+                <label for="StudentID">Student ID</label> 
+			    <input type="text" name= "StudentID" id="StudentID" maxlength="30" size="10" required pattern="\d{7,10}" > </p>
                 <p><label for="Given_Name">Given Name</label> 
-			    <input type="text" name= "Given_Name" id="Given_Name" maxlength="30" size="10" required="required"/> 
+			    <input type="text" name= "Given_Name" id="Given_Name" maxlength="30" size="10" required pattern="[A-Za-z\s]{1,30}">
                 <label for="Family_Name">Family Name</label> 
-			    <input type="text" name= "Family_Name" id="Family_Name" maxlength="30" size="10" required="required"/> </p>
+			     <input type="text" name= "Family_Name" id="Family_Name" maxlength="30" size="10" required pattern="[A-Za-z\s]{1,30}"> </p>
             </fieldset>
+
             <fieldset>
 		        <legend>Your Unit</legend>
                 <p>
-				<input type="radio" id="COS10011" name="Unit" value="COS10011"/>
+				<input type="radio" id="COS10011" name="Unit" value="COS10011">
 		    	<label for="COS10011">COS10011</label> 
-                <input type="radio" id="COS60004" name="Unit" value="COS60004"/>
+                <input type="radio" id="COS60004" name="Unit" value="COS60004">
 		    	<label for="COS60004">COS60004</label> 
-                <input type="radio" id="COS60007" name="Unit" value="COS60007"/>
+                <input type="radio" id="COS60007" name="Unit" value="COS60007">
 		    	<label for="COS60007">COS60007</label> 
                 </p>
-                		<p><label for="Tutor">Your Tutor</label> 
-			<select name="Tutor" id="Tutor" placeholder="Please Select">
-				<option value="Dennis D">Dennis D</option>			
-				<option value="Ronald P">Ronald P</option>
-				<option value="Fredrick L">Fredric L</option>
-				<option value="Patrick R">Patrick R</option>
-				<option value="Barry C">Barry C</option>
-				<option value="Simon T">Simon T</option>
-				<option value="other">Other</option>
-			</select>
+                <p>
+                 <label for="Tutor">Your Tutor</label> 
+			     <select name="Tutor" id="Tutor" required>
+                    <option value="">Please Select</option>
+				    <option value="Dennis D">Dennis D</option>			
+				    <option value="Ronald P">Ronald P</option>
+				    <option value="Fredrick L">Fredric L</option>
+				    <option value="Patrick R">Patrick R</option>
+				    <option value="Barry C">Barry C</option>
+				    <option value="Simon T">Simon T</option>
+				    <option value="other">Other</option>
+			    </select>
+                </p>
             </fieldset>
+
             <fieldset>
 		        <legend>Issue</legend>
-                <p><label for="Coding_Language">HTML</label> 
-				<input type="checkbox" id="Coding_language" name="category[]" value="best" checked="checked"/>
-                <label for="Coding_language">CSS</label> 
-				<input type="checkbox" id="Coding_language" name="category[]" value="best" checked="checked"/>
-                <label for="Coding_language">Javascript</label> 
-				<input type="checkbox" id="Coding_language" name="category[]" value="best" checked="checked"/>
-                <label for="Coding_language">PHP</label> 
-				<input type="checkbox" id="Coding_language" name="category[]" value="best" checked="checked"/>
-                <label for="Coding_language">MySQL</label> 
-				<input type="checkbox" id="Coding_language" name="category[]" value="best" checked="checked"/>
+                <p><label for="Issue_html">HTML</label> 
+				<input type="checkbox" id="Issue_html" name="category[]" value="best" checked="checked">
+
+                <label for="Issue_CSS">CSS</label> 
+				<input type="checkbox" id="Issue_CSS" name="category[]" value="best" >
+
+                <label for="Issue_Javascript">Javascript</label> 
+				<input type="checkbox" id="Issue_Javascript" name="category[]" value="best" >
+
+                <label for="Issue_PHP">PHP</label> 
+				<input type="checkbox" id="Issue_PHP" name="category[]" value="best" >
+
+                <label for="Issue_MySQL">MySQL</label> 
+				<input type="checkbox" id="Issue_MySQL" name="category[]" value="best" >
+
 			    </p>
-                <p><label for="Description">Description of Issue</label>
+                <p>
+                <label for="Description">Description of Issue</label> </p>
+
 			    <textarea id="Description" name="Description" rows="4" cols="40"></textarea>
-		        </p>
+		        
             </fieldset>
+
             <fieldset>
                 <legend>Preferred Date / Time</legend>
                 <p><label for="Date">Date</label> 
-			    <input type="date" name= "Date" id="Date" placeholder="dd-mm-yyyy" maxlength="10" size="10"/>
+			    <input type="date" name= "Date" id="Date">
 		        </p>
                 <p>
                 <label for="Time">Time</label> 
-			    <input type="Time" name= "Time" id="Time" placeholder="00:00" maxlength="5" size="10"/>
+			    <input type="Time" name= "Time" id="Time" size="10">
                 </p>
             </fieldset>
             
-            <input type= "submit" value="Book"/>
-	        <input type= "reset" value="Reset Form"/>
-        </fieldset>
+        </form>
+         </fieldset>
+            <input type= "submit" value="Book">
+	        <input type= "reset" value="Reset Form">
     </body>
 </html>
 
